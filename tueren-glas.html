@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Türen & Glas</title>
+  <meta name="description" content="Fotografien, Fundstücke, Beobachtungen." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" aria-label="Navigation">
+    <a href="index.html">Start</a>
+    <a href="serien.html" aria-current="page">Serien</a>
+    <a href="einzelarbeiten.html">Einzelarbeiten</a>
+    <a href="kontakt.html">Kontakt</a>
+  </header>
+  <main>
+    <section class="series-hero" aria-label="Türen & Glas">
+      <a class="back-link" href="serien.html">← Serien</a>
+      <h1 class="series-title">Türen & Glas</h1>
+      <p class="series-text">Fotografien alter Eingänge, Fenster und Strukturgläser. Beobachtungen von Übergängen zwischen Innen und Außen.</p>
+      <img class="series-hero-img" src="images/04-tuer-33.jpg" alt="Türen & Glas" />
+    </section>
+    <section class="works" aria-label="Bilder der Serie">
+      <div class="work-grid">
+        <button class="work" data-title="Tür Nr. 33" data-year="" data-note="" aria-label="Tür Nr. 33 ansehen"><img src="images/04-tuer-33.jpg" alt="Tür Nr. 33" /></button>
+        <button class="work" data-title="Fenster mit Pflanzen" data-year="" data-note="" aria-label="Fenster mit Pflanzen ansehen"><img src="images/03-fenster-mit-pflanzen.jpg" alt="Fenster mit Pflanzen" /></button>
+        <button class="work" data-title="Foto Film Ton Video" data-year="" data-note="" aria-label="Foto Film Ton Video ansehen"><img src="images/07-foto-film-ton-video.jpg" alt="Foto Film Ton Video" /></button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Bildansicht">
+    <button class="close" id="closeLightbox" aria-label="Bild schließen">×</button>
+    <img id="lightboxImage" src="" alt="" />
+    <div class="caption" id="caption"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

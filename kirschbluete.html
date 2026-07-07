@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kirschblüte</title>
+  <meta name="description" content="Fotografien, Fundstücke, Beobachtungen." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" aria-label="Navigation">
+    <a href="index.html">Start</a>
+    <a href="serien.html" aria-current="page">Serien</a>
+    <a href="einzelarbeiten.html">Einzelarbeiten</a>
+    <a href="kontakt.html">Kontakt</a>
+  </header>
+  <main>
+    <section class="series-hero" aria-label="Kirschblüte">
+      <a class="back-link" href="serien.html">← Serien</a>
+      <h1 class="series-title">Kirschblüte</h1>
+      <p class="series-text">Eine Sammlung von Bildern rund um Licht, Blüte und Vergänglichkeit.</p>
+      <img class="series-hero-img" src="images/hero-kirschblueten-stuhl.jpg" alt="Kirschblüte" />
+    </section>
+    <section class="works" aria-label="Bilder der Serie">
+      <div class="work-grid">
+        <button class="work" data-title="Kirschblüten-Stuhl" data-year="" data-note="" aria-label="Kirschblüten-Stuhl ansehen"><img src="images/hero-kirschblueten-stuhl.jpg" alt="Kirschblüten-Stuhl" /></button>
+        <button class="work" data-title="Orange Wand" data-year="" data-note="" aria-label="Orange Wand ansehen"><img src="images/09-kind-orangene-wand.jpg" alt="Orange Wand" /></button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Bildansicht">
+    <button class="close" id="closeLightbox" aria-label="Bild schließen">×</button>
+    <img id="lightboxImage" src="" alt="" />
+    <div class="caption" id="caption"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

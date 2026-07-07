@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Durchblicke</title>
+  <meta name="description" content="Fotografien, Fundstücke, Beobachtungen." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" aria-label="Navigation">
+    <a href="index.html">Start</a>
+    <a href="serien.html" aria-current="page">Serien</a>
+    <a href="einzelarbeiten.html">Einzelarbeiten</a>
+    <a href="kontakt.html">Kontakt</a>
+  </header>
+  <main>
+    <section class="series-hero" aria-label="Durchblicke">
+      <a class="back-link" href="serien.html">← Serien</a>
+      <h1 class="series-title">Durchblicke</h1>
+      <p class="series-text">Fotografien von Überlagerungen, Reflexionen und Momenten zwischen Sichtbarkeit und Verbergen.</p>
+      <img class="series-hero-img" src="images/01-frau-hinter-pflanzen.jpg" alt="Durchblicke" />
+    </section>
+    <section class="works" aria-label="Bilder der Serie">
+      <div class="work-grid">
+        <button class="work" data-title="Frau hinter Pflanzen" data-year="" data-note="" aria-label="Frau hinter Pflanzen ansehen"><img src="images/01-frau-hinter-pflanzen.jpg" alt="Frau hinter Pflanzen" /></button>
+        <button class="work" data-title="Tür Nr. 33" data-year="" data-note="" aria-label="Tür Nr. 33 ansehen"><img src="images/04-tuer-33.jpg" alt="Tür Nr. 33" /></button>
+        <button class="work" data-title="Fenster mit Pflanzen" data-year="" data-note="" aria-label="Fenster mit Pflanzen ansehen"><img src="images/03-fenster-mit-pflanzen.jpg" alt="Fenster mit Pflanzen" /></button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Bildansicht">
+    <button class="close" id="closeLightbox" aria-label="Bild schließen">×</button>
+    <img id="lightboxImage" src="" alt="" />
+    <div class="caption" id="caption"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
