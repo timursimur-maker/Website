@@ -787,3 +787,12 @@ body {
     font-size: clamp(1.7rem, 8vw, 2.6rem);
   }
 }
+
+/* v2.8: Startseite unten reduziert – Einzelarbeiten als einzelner Link */
+.standalone-link {
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  padding-top: clamp(3.5rem, 6vw, 5rem);
+}
+.standalone-link .compact-link-list {
+  display: block;
+}
