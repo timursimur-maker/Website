@@ -7,9 +7,16 @@ let lightboxItems = [];
 let currentIndex = -1;
 let touchStartX = 0;
 let touchStartY = 0;
+let controlsTimer = null;
+
+const isTouchDevice = () => window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
 function ensureLightboxControls() {
   if (!lightbox) return;
+  if (isTouchDevice()) {
+    lightbox.classList.add('touch-lightbox');
+    return;
+  }
 
   if (!document.getElementById('prevLightbox')) {
     const prev = document.createElement('button');
@@ -51,6 +58,32 @@ function updateNavVisibility() {
   if (next) next.hidden = !show;
 }
 
+function showControls(autoHide = true) {
+  if (!lightbox) return;
+  lightbox.classList.add('controls-visible');
+  if (controlsTimer) window.clearTimeout(controlsTimer);
+  if (autoHide) {
+    controlsTimer = window.setTimeout(() => {
+      lightbox.classList.remove('controls-visible');
+    }, 2300);
+  }
+}
+
+function hideControls() {
+  if (!lightbox) return;
+  if (controlsTimer) window.clearTimeout(controlsTimer);
+  lightbox.classList.remove('controls-visible');
+}
+
+function toggleControls() {
+  if (!lightbox) return;
+  if (lightbox.classList.contains('controls-visible')) {
+    hideControls();
+  } else {
+    showControls(true);
+  }
+}
+
 function showLightboxItem(index) {
   if (!lightbox || !lightboxImage || !lightboxItems.length) return;
   currentIndex = (index + lightboxItems.length) % lightboxItems.length;
@@ -81,10 +114,12 @@ function openLightbox(indexOrSrc, alt = '') {
   lightbox.classList.add('open');
   lightbox.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+  hideControls();
 }
 
 function closeLightbox() {
   if (!lightbox || !lightboxImage) return;
+  hideControls();
   lightbox.classList.remove('open');
   lightbox.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
@@ -95,11 +130,13 @@ function closeLightbox() {
 function nextLightboxImage() {
   if (!lightbox?.classList.contains('open') || lightboxItems.length < 2) return;
   showLightboxItem(currentIndex + 1);
+  if (!isTouchDevice()) showControls(true);
 }
 
 function previousLightboxImage() {
   if (!lightbox?.classList.contains('open') || lightboxItems.length < 2) return;
   showLightboxItem(currentIndex - 1);
+  if (!isTouchDevice()) showControls(true);
 }
 
 ensureLightboxControls();
@@ -109,7 +146,13 @@ document.querySelectorAll('.work, .hero-trigger').forEach((button, index) => {
   button.addEventListener('click', () => openLightbox(index));
 });
 
-if (closeButton) closeButton.addEventListener('click', closeLightbox);
+if (closeButton) {
+  closeButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    closeLightbox();
+  });
+}
+
 document.getElementById('nextLightbox')?.addEventListener('click', (event) => {
   event.stopPropagation();
   nextLightboxImage();
@@ -124,6 +167,10 @@ if (lightbox) {
     if (event.target === lightbox) closeLightbox();
   });
 
+  lightbox.addEventListener('mousemove', () => {
+    if (!isTouchDevice() && lightbox.classList.contains('open')) showControls(true);
+  });
+
   lightbox.addEventListener('touchstart', (event) => {
     const touch = event.changedTouches[0];
     touchStartX = touch.clientX;
@@ -134,9 +181,14 @@ if (lightbox) {
     const touch = event.changedTouches[0];
     const diffX = touch.clientX - touchStartX;
     const diffY = touch.clientY - touchStartY;
-    if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY)) {
+    const isSwipe = Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY);
+
+    if (isSwipe) {
       diffX < 0 ? nextLightboxImage() : previousLightboxImage();
+      return;
     }
+
+    toggleControls();
   }, { passive: true });
 }
 
