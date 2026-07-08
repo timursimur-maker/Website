@@ -484,3 +484,57 @@ h1, h2 {
 .project-card a { color: inherit; text-decoration: none; }
 .project-card a:hover { border-bottom: 1px solid currentColor; }
 .page-intro a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
+
+/* v2.1: Startseite verdichten + Platzhalter für späteren Namen */
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+}
+.site-name {
+  justify-self: start;
+  opacity: 0.42 !important;
+}
+.site-nav {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-end;
+}
+
+.work-grid {
+  gap: clamp(1rem, 2.1vw, 2.2rem);
+}
+.work:nth-child(2) { margin-top: 4.5rem; }
+.work:nth-child(3) { margin-top: 2.8rem; }
+.work:nth-child(5) { margin-top: 2rem; }
+.work:nth-child(6) { margin-top: 5.2rem; }
+.work:nth-child(8) { margin-top: 3.2rem; }
+.work:nth-child(9) { margin-top: 1.2rem; }
+.works { padding-bottom: 6.5rem; }
+
+@media (max-width: 760px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+  .site-nav {
+    justify-content: flex-start;
+    gap: 0.85rem;
+    overflow-x: auto;
+  }
+  .site-name {
+    font-size: 0.72rem;
+  }
+  .work {
+    margin-bottom: 1.35rem !important;
+  }
+  .work:nth-child(even) {
+    width: 88%;
+  }
+  .work:nth-child(3n) {
+    width: 92%;
+  }
+  .works {
+    padding-bottom: 4.8rem;
+  }
+}
