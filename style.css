@@ -612,3 +612,6 @@ h1, h2 {
   .site-nav::-webkit-scrollbar { display: none; }
   .site-header a { font-size: 0.7rem; }
 }
+
+/* v2.3: captions intentionally hidden */
+.caption{display:none !important;}
