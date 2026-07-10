@@ -1,10 +1,9 @@
-KLEINES REPARATUR-PAKET – KEINE BILDER ENTHALTEN
+LAYOUT-REPARATUR v3.2 – ohne Fotos
 
-Diese vier Dateien im Hauptverzeichnis des GitHub-Repositories hochladen und vorhandene Dateien ersetzen:
-- index.html
-- serien.html
+Diese Dateien in das Hauptverzeichnis des GitHub-Repositories hochladen und vorhandene Dateien ersetzen:
+- alle HTML-Dateien
 - style.css
 - script.js
 
-Die vorhandenen Fotos und Unterseiten bleiben unverändert.
-Nach dem Commit 1–3 Minuten warten und die Website einmal hart neu laden.
+Keine Bilddateien löschen oder erneut hochladen.
+Nach dem Commit 1–3 Minuten warten und die veröffentlichte Seite mit einem privaten Browser-Tab öffnen.
