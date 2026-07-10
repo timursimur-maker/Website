@@ -1,12 +1,10 @@
-Website Version 1.3
+KLEINES REPARATUR-PAKET – KEINE BILDER ENTHALTEN
 
-Änderungen gegenüber Version 1.2:
-- Hero-Bild steht weiterhin allein am Anfang.
-- Auf Smartphones wird das Hero-Bild nicht mehr hart zugeschnitten, damit Stuhl und Hocker vollständig sichtbar bleiben.
-- Die Einstiegsworte stehen auf kleinen Bildschirmen untereinander:
-  Fotografien,
-  Fundstücke,
-  Beobachtungen.
-- Horizontales Scrollen sollte nicht mehr auftreten.
+Diese vier Dateien im Hauptverzeichnis des GitHub-Repositories hochladen und vorhandene Dateien ersetzen:
+- index.html
+- serien.html
+- style.css
+- script.js
 
-Zum Anschauen: index.html im Browser öffnen.
+Die vorhandenen Fotos und Unterseiten bleiben unverändert.
+Nach dem Commit 1–3 Minuten warten und die Website einmal hart neu laden.
