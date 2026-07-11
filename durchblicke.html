@@ -5,38 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Durchblicke</title>
   <meta name="description" content="Fotografien von Fenstern, Gittern, Spiegelungen und visuellen Schichten.">
-  <link rel="stylesheet" href="style.css?v=33">
+  <link rel="stylesheet" href="style.css?v=34">
   <style>
+    .series-hero {
+      padding-bottom: clamp(4.5rem, 9vw, 8rem);
+    }
+    .series-hero .series-title {
+      margin-top: clamp(2.3rem, 5vw, 4.8rem);
+      margin-bottom: clamp(1.6rem, 3vw, 2.6rem);
+      font-size: clamp(3.6rem, 10vw, 8.5rem);
+      line-height: .92;
+      letter-spacing: -.055em;
+    }
+    .series-hero .series-text {
+      max-width: 37rem;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      line-height: 1.55;
+    }
+
     .durchblicke-page {
-      width:min(1180px,100%);
-      margin:0 auto;
-      padding:0 var(--pad,clamp(1.15rem,3.2vw,3rem)) clamp(8rem,14vw,13rem);
+      width: min(1240px, 100%);
+      margin: 0 auto;
+      padding: 0 var(--pad, clamp(1.15rem, 3.2vw, 3rem)) clamp(8rem, 14vw, 13rem);
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      column-gap: clamp(1rem, 2.4vw, 2.4rem);
+      row-gap: clamp(5rem, 11vw, 10rem);
+      align-items: start;
     }
     .durchblicke-page .work {
-      display:block;
-      border:0;
-      padding:0;
-      background:transparent;
-      cursor:zoom-in;
+      display: block;
+      width: 100%;
+      margin: 0;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      cursor: zoom-in;
     }
     .durchblicke-page .work img {
-      width:100%;
-      height:auto;
-      display:block;
+      width: 100%;
+      height: auto;
+      display: block;
     }
-    .db-wide { width:100%; margin-bottom:clamp(6rem,12vw,11rem); }
-    .db-narrow { width:min(560px,74%); margin:0 auto clamp(7rem,13vw,12rem); }
-    .db-center { width:min(900px,100%); margin:0 auto clamp(7rem,13vw,12rem); }
-    .db-offset-left { width:min(760px,78%); margin:0 auto clamp(7rem,13vw,12rem) 0; }
-    .db-offset-right { width:min(760px,78%); margin:0 0 clamp(7rem,13vw,12rem) auto; }
-    .db-small { width:min(500px,58%); margin:0 auto clamp(7rem,13vw,12rem); }
-    .db-pair-a, .db-pair-b { width:min(760px,75%); }
-    .db-pair-a { margin:0 auto clamp(2rem,4vw,4rem) 0; }
-    .db-pair-b { margin:0 0 clamp(7rem,13vw,12rem) auto; }
-    @media (max-width:760px) {
-      .db-wide,.db-narrow,.db-center,.db-offset-left,.db-offset-right,.db-small,.db-pair-a,.db-pair-b {
-        width:100%;
-        margin:0 0 5.5rem;
+
+    .db-hero { grid-column: 1 / -1; }
+    .db-pair { grid-column: span 6; }
+    .db-pair.tall { grid-column: 2 / span 4; }
+    .db-pair.tall + .db-pair { grid-column: 7 / span 5; align-self: end; }
+    .db-wide { grid-column: 1 / -1; }
+    .db-offset-left { grid-column: 1 / span 8; }
+    .db-offset-right { grid-column: 5 / -1; }
+    .db-small-right { grid-column: 8 / span 5; }
+    .db-small-left { grid-column: 1 / span 5; }
+    .db-narrow { grid-column: 5 / span 4; }
+    .db-small-center { grid-column: 5 / span 4; }
+    .db-final { grid-column: 2 / span 10; }
+
+    @media (max-width: 760px) {
+      .series-hero {
+        padding-bottom: 4rem;
+      }
+      .series-hero .series-title {
+        margin-top: 2rem;
+      }
+      .durchblicke-page {
+        display: block;
+      }
+      .durchblicke-page .work {
+        margin: 0 0 5.5rem;
+      }
+      .db-pair.tall,
+      .db-pair.tall + .db-pair,
+      .db-hero,
+      .db-pair,
+      .db-wide,
+      .db-offset-left,
+      .db-offset-right,
+      .db-small-right,
+      .db-small-left,
+      .db-narrow,
+      .db-small-center,
+      .db-final {
+        width: 100%;
+      }
+      .db-small-center {
+        width: 72%;
+        margin-left: auto !important;
+        margin-right: auto !important;
       }
     }
   </style>
@@ -60,7 +115,51 @@
     </section>
 
     <section class="durchblicke-page" aria-label="Bilder der Serie Durchblicke">
-      <button class="work db-wide"><img src="20210114_183939.jpg" alt="Fotografie 1 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-pair-a"><img src="20210114_184031.jpg" alt="Fotografie 2 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-pair-b"><img src="20210217_142447.jpg" alt="Fotografie 3 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-narrow"><img src="20210412_150620.jpg" alt="Fotografie 4 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-center"><img src="20210412_150758.jpg" alt="Fotografie 5 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-small"><img src="20211112_204446.jpg" alt="Fotografie 6 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-wide"><img src="20211112_205455.jpg" alt="Fotografie 7 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-offset-right"><img src="20221228_115817.jpg" alt="Fotografie 8 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-offset-left"><img src="DSCF2550.JPG" alt="Fotografie 9 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-pair-a"><img src="DSCF2956.JPG" alt="Fotografie 10 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-pair-b"><img src="DSCF3255.JPG" alt="Fotografie 11 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-center"><img src="DSCF4054.JPG" alt="Fotografie 12 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-wide"><img src="DSCF4528.JPG" alt="Fotografie 13 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-offset-left"><img src="DSCF4590.JPG" alt="Fotografie 14 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-offset-right"><img src="DSCF4704.JPG" alt="Fotografie 15 aus der Serie Durchblicke" loading="lazy"></button>
+      <button class="work db-hero" aria-label="Blick aus einem Fenster über Straße und Landschaft groß ansehen">
+        <img src="DSCF4704.JPG" alt="Blick aus einem Fenster über Straße und Landschaft" loading="lazy">
+      </button>
+      <button class="work db-pair tall" aria-label="Regentropfen auf einer Scheibe groß ansehen">
+        <img src="20210114_184031.jpg" alt="Regentropfen auf einer Scheibe" loading="lazy">
+      </button>
+      <button class="work db-pair" aria-label="Beschlagene Scheibe mit undeutlichen Formen groß ansehen">
+        <img src="20210412_150758.jpg" alt="Beschlagene Scheibe mit undeutlichen Formen" loading="lazy">
+      </button>
+      <button class="work db-wide" aria-label="Schaufenster mit Spiegelungen und Innenraum groß ansehen">
+        <img src="20210412_150620.jpg" alt="Schaufenster mit Spiegelungen und Innenraum" loading="lazy">
+      </button>
+      <button class="work db-offset-left" aria-label="Restaurantfenster mit Spiegelungen und Innenraum groß ansehen">
+        <img src="20211112_204446.jpg" alt="Restaurantfenster mit Spiegelungen und Innenraum" loading="lazy">
+      </button>
+      <button class="work db-offset-right" aria-label="Fenster mit Pflanzen im warmen Innenlicht groß ansehen">
+        <img src="20211112_205455.jpg" alt="Fenster mit Pflanzen im warmen Innenlicht" loading="lazy">
+      </button>
+      <button class="work db-wide" aria-label="Schaufensterpuppen hinter spiegelnder Scheibe groß ansehen">
+        <img src="DSCF4590.JPG" alt="Schaufensterpuppen hinter spiegelnder Scheibe" loading="lazy">
+      </button>
+      <button class="work db-small-right" aria-label="Büste zwischen dichter Vegetation groß ansehen">
+        <img src="20221228_115817.jpg" alt="Büste zwischen dichter Vegetation" loading="lazy">
+      </button>
+      <button class="work db-small-left" aria-label="Gitter vor einem Treppenhaus groß ansehen">
+        <img src="DSCF2550.JPG" alt="Gitter vor einem Treppenhaus" loading="lazy">
+      </button>
+      <button class="work db-pair" aria-label="Zwei Kinder hinter hohem Gras groß ansehen">
+        <img src="DSCF2956.JPG" alt="Zwei Kinder hinter hohem Gras" loading="lazy">
+      </button>
+      <button class="work db-pair" aria-label="Kind hinter einem Trampolinnetz groß ansehen">
+        <img src="DSCF4054.JPG" alt="Kind hinter einem Trampolinnetz" loading="lazy">
+      </button>
+      <button class="work db-narrow" aria-label="Orange Blumen durch einen schmalen Zwischenraum groß ansehen">
+        <img src="DSCF4528.JPG" alt="Orange Blumen durch einen schmalen Zwischenraum" loading="lazy">
+      </button>
+      <button class="work db-small-center" aria-label="Kristallartige Öffnung im Dunkel groß ansehen">
+        <img src="DSCF3255.JPG" alt="Kristallartige Öffnung im Dunkel" loading="lazy">
+      </button>
+      <button class="work db-wide" aria-label="Kölner Dom als Silhouette mit Vögeln groß ansehen">
+        <img src="20210217_142447.jpg" alt="Kölner Dom als Silhouette mit Vögeln" loading="lazy">
+      </button>
+      <button class="work db-final" aria-label="Baum und Landschaft in einer Spiegelung groß ansehen">
+        <img src="20210114_183939.jpg" alt="Baum und Landschaft in einer Spiegelung" loading="lazy">
+      </button>
     </section>
   </main>
 
@@ -70,6 +169,6 @@
     <div class="caption" id="caption"></div>
   </div>
 
-  <script src="script.js?v=33"></script>
+  <script src="script.js?v=34"></script>
 </body>
 </html>
