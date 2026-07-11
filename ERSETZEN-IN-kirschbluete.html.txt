@@ -1,0 +1,6 @@
+<!-- Ersetze in kirschbluete.html nur den letzten Bildblock -->
+<div class="kirsch-closing">
+  <button class="work" aria-label="Geschlossenes Fenster groß ansehen">
+    <img src="kirschbluete-06.jpg" alt="Geschlossenes Fenster mit farbigem Strukturglas" />
+  </button>
+</div>
