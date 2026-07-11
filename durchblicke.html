@@ -4,34 +4,116 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Durchblicke</title>
-  <meta name="description" content="Fotografien, Fundstücke, Beobachtungen." />
+  <meta name="description" content="Fotografien von Fenstern, Gittern, Spiegelungen und visuellen Schichten." />
   <link rel="stylesheet" href="style.css?v=32" />
+  <style>
+    .durchblicke-page{
+      width:min(1180px,100%);
+      margin:0 auto;
+      padding:0 var(--pad,clamp(1.15rem,3.2vw,3rem)) clamp(8rem,14vw,13rem);
+    }
+    .durchblicke-page .work{
+      display:block;
+      border:0;
+      padding:0;
+      background:transparent;
+      cursor:zoom-in;
+    }
+    .durchblicke-page .work img{width:100%;height:auto;display:block}
+    .db-wide{width:100%;margin-bottom:clamp(6rem,12vw,11rem)}
+    .db-pair{
+      display:grid;
+      grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+      gap:clamp(1.5rem,5vw,5rem);
+      align-items:start;
+      margin-bottom:clamp(7rem,13vw,12rem)
+    }
+    .db-pair .work:nth-child(2){margin-top:clamp(3rem,9vw,8rem)}
+    .db-narrow{width:min(560px,74%);margin:0 auto clamp(7rem,13vw,12rem)}
+    .db-center{width:min(900px,100%);margin:0 auto clamp(7rem,13vw,12rem)}
+    .db-offset-left{width:min(760px,78%);margin:0 auto clamp(7rem,13vw,12rem) 0}
+    .db-offset-right{width:min(760px,78%);margin:0 0 clamp(7rem,13vw,12rem) auto}
+    .db-small{width:min(500px,58%);margin:0 auto clamp(7rem,13vw,12rem)}
+    .db-blackwhite{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,.82fr);
+      gap:clamp(2rem,7vw,7rem);
+      align-items:center;
+      margin-bottom:clamp(8rem,14vw,13rem)
+    }
+    .db-closing{
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+      gap:clamp(2rem,6vw,6rem);
+      align-items:end
+    }
+    .db-closing .work:last-child{margin-bottom:clamp(2rem,7vw,6rem)}
+    @media (max-width:760px){
+      .db-pair,.db-blackwhite,.db-closing{display:block}
+      .db-pair .work,.db-blackwhite .work,.db-closing .work{width:100%;margin:0 0 4.5rem!important}
+      .db-narrow,.db-center,.db-offset-left,.db-offset-right,.db-small{width:100%;margin:0 0 5.5rem}
+      .db-wide{margin-bottom:5.5rem}
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" aria-label="Navigation">
     <a class="site-name" href="index.html" aria-label="Startseite"></a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <a href="index.html">Start</a>
-    <a href="serien.html" aria-current="page">Serien</a>
-    <a href="einzelarbeiten.html">Einzelarbeiten</a>
+      <a href="serien.html" aria-current="page">Serien</a>
+      <a href="einzelarbeiten.html">Einzelarbeiten</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
+
   <main>
     <section class="series-hero" aria-label="Durchblicke">
       <a class="back-link" href="serien.html">← Serien</a>
       <h1 class="series-title">Durchblicke</h1>
-      <p class="series-text">Fotografien von Überlagerungen, Reflexionen und Momenten zwischen Sichtbarkeit und Verbergen.</p>
-      <img class="series-hero-img" src="01-frau-hinter-pflanzen.jpg" alt="Durchblicke" />
-    </section>
-    <section class="works" aria-label="Bilder der Serie">
-      <div class="work-grid">
-        <button class="work" aria-label="Frau hinter Pflanzen ansehen"><img src="01-frau-hinter-pflanzen.jpg" alt="Frau hinter Pflanzen" /></button>
-        <button class="work" aria-label="Tür Nr. 33 ansehen"><img src="04-tuer-33.jpg" alt="Tür Nr. 33" /></button>
-        <button class="work" aria-label="Fenster mit Pflanzen ansehen"><img src="03-fenster-mit-pflanzen.jpg" alt="Fenster mit Pflanzen" /></button>
-      </div>
+      <p class="series-text">Fotografien von Fenstern, Gittern, Spiegelungen und visuellen Schichten – zwischen Innen und Außen, Nähe und Distanz.</p>
     </section>
 
+    <section class="durchblicke-page" aria-label="Bilder der Serie Durchblicke">
+
+      <button class="work db-wide"><img src="11249.jpg" alt="Blick aus dem Fenster auf Landschaft und Straße" /></button>
+
+      <div class="db-pair">
+        <button class="work"><img src="13281.jpg" alt="Schaufensterpuppen hinter spiegelnder Scheibe" /></button>
+        <button class="work"><img src="3653.jpg" alt="Restaurantfenster mit Spiegelungen und Innenraum" /></button>
+      </div>
+
+      <button class="work db-narrow"><img src="12381.jpg" alt="Orange Blumen durch einen schmalen Zwischenraum gesehen" /></button>
+
+      <button class="work db-center"><img src="12382.jpg" alt="Kind hinter einem Trampolinnetz" /></button>
+
+      <button class="work db-small"><img src="12384.jpg" alt="Kristallartige Öffnung im Dunkel" /></button>
+
+      <button class="work db-wide"><img src="12383.jpg" alt="Zwei Kinder hinter hohem Gras" /></button>
+
+      <button class="work db-offset-right"><img src="3655.jpg" alt="Innenhof hinter einem Metallgitter" /></button>
+
+      <button class="work db-offset-left"><img src="3560.jpg" alt="Schwarzweißporträt hinter Blättern und Spiegelungen" /></button>
+
+      <div class="db-pair">
+        <button class="work"><img src="3654.jpg" alt="Pflanzen hinter einem Schaufenster" /></button>
+        <button class="work"><img src="3561.jpg" alt="Kranhaus, Straße und vorbeifahrendes Auto" /></button>
+      </div>
+
+      <button class="work db-center"><img src="3553.jpg" alt="Büste zwischen dichtem Grün" /></button>
+
+      <button class="work db-wide"><img src="3559.jpg" alt="Beschlagene Fensterscheibe mit Stadtsilhouette" /></button>
+
+      <div class="db-blackwhite">
+        <button class="work"><img src="3558.jpg" alt="Schwarzweißes Werkstattfenster mit Spiegelungen" /></button>
+        <button class="work"><img src="3557.jpg" alt="Dom und Vögel als Silhouetten vor farbigem Himmel" /></button>
+      </div>
+
+      <button class="work db-offset-left"><img src="3555.jpg" alt="Baum und Gebäude in Schwarzweiß" /></button>
+
+      <button class="work db-offset-right"><img src="3556.jpg" alt="Regentropfen auf einer Fensterscheibe" /></button>
+
+    </section>
   </main>
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Bildansicht">
@@ -39,6 +121,7 @@
     <img id="lightboxImage" src="" alt="" />
     <div class="caption" id="caption"></div>
   </div>
+
   <script src="script.js?v=32"></script>
 </body>
 </html>
