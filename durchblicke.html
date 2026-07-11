@@ -1,58 +1,43 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Durchblicke</title>
-  <meta name="description" content="Fotografien von Fenstern, Gittern, Spiegelungen und visuellen Schichten." />
-  <link rel="stylesheet" href="style.css?v=32" />
+  <meta name="description" content="Fotografien von Fenstern, Gittern, Spiegelungen und visuellen Schichten.">
+  <link rel="stylesheet" href="style.css?v=33">
   <style>
-    .durchblicke-page{
+    .durchblicke-page {
       width:min(1180px,100%);
       margin:0 auto;
       padding:0 var(--pad,clamp(1.15rem,3.2vw,3rem)) clamp(8rem,14vw,13rem);
     }
-    .durchblicke-page .work{
+    .durchblicke-page .work {
       display:block;
       border:0;
       padding:0;
       background:transparent;
       cursor:zoom-in;
     }
-    .durchblicke-page .work img{width:100%;height:auto;display:block}
-    .db-wide{width:100%;margin-bottom:clamp(6rem,12vw,11rem)}
-    .db-pair{
-      display:grid;
-      grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
-      gap:clamp(1.5rem,5vw,5rem);
-      align-items:start;
-      margin-bottom:clamp(7rem,13vw,12rem)
+    .durchblicke-page .work img {
+      width:100%;
+      height:auto;
+      display:block;
     }
-    .db-pair .work:nth-child(2){margin-top:clamp(3rem,9vw,8rem)}
-    .db-narrow{width:min(560px,74%);margin:0 auto clamp(7rem,13vw,12rem)}
-    .db-center{width:min(900px,100%);margin:0 auto clamp(7rem,13vw,12rem)}
-    .db-offset-left{width:min(760px,78%);margin:0 auto clamp(7rem,13vw,12rem) 0}
-    .db-offset-right{width:min(760px,78%);margin:0 0 clamp(7rem,13vw,12rem) auto}
-    .db-small{width:min(500px,58%);margin:0 auto clamp(7rem,13vw,12rem)}
-    .db-blackwhite{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,.82fr);
-      gap:clamp(2rem,7vw,7rem);
-      align-items:center;
-      margin-bottom:clamp(8rem,14vw,13rem)
-    }
-    .db-closing{
-      display:grid;
-      grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
-      gap:clamp(2rem,6vw,6rem);
-      align-items:end
-    }
-    .db-closing .work:last-child{margin-bottom:clamp(2rem,7vw,6rem)}
-    @media (max-width:760px){
-      .db-pair,.db-blackwhite,.db-closing{display:block}
-      .db-pair .work,.db-blackwhite .work,.db-closing .work{width:100%;margin:0 0 4.5rem!important}
-      .db-narrow,.db-center,.db-offset-left,.db-offset-right,.db-small{width:100%;margin:0 0 5.5rem}
-      .db-wide{margin-bottom:5.5rem}
+    .db-wide { width:100%; margin-bottom:clamp(6rem,12vw,11rem); }
+    .db-narrow { width:min(560px,74%); margin:0 auto clamp(7rem,13vw,12rem); }
+    .db-center { width:min(900px,100%); margin:0 auto clamp(7rem,13vw,12rem); }
+    .db-offset-left { width:min(760px,78%); margin:0 auto clamp(7rem,13vw,12rem) 0; }
+    .db-offset-right { width:min(760px,78%); margin:0 0 clamp(7rem,13vw,12rem) auto; }
+    .db-small { width:min(500px,58%); margin:0 auto clamp(7rem,13vw,12rem); }
+    .db-pair-a, .db-pair-b { width:min(760px,75%); }
+    .db-pair-a { margin:0 auto clamp(2rem,4vw,4rem) 0; }
+    .db-pair-b { margin:0 0 clamp(7rem,13vw,12rem) auto; }
+    @media (max-width:760px) {
+      .db-wide,.db-narrow,.db-center,.db-offset-left,.db-offset-right,.db-small,.db-pair-a,.db-pair-b {
+        width:100%;
+        margin:0 0 5.5rem;
+      }
     }
   </style>
 </head>
@@ -75,53 +60,16 @@
     </section>
 
     <section class="durchblicke-page" aria-label="Bilder der Serie Durchblicke">
-
-      <button class="work db-wide"><img src="11249.jpg" alt="Blick aus dem Fenster auf Landschaft und Straße" /></button>
-
-      <div class="db-pair">
-        <button class="work"><img src="13281.jpg" alt="Schaufensterpuppen hinter spiegelnder Scheibe" /></button>
-        <button class="work"><img src="3653.jpg" alt="Restaurantfenster mit Spiegelungen und Innenraum" /></button>
-      </div>
-
-      <button class="work db-narrow"><img src="12381.jpg" alt="Orange Blumen durch einen schmalen Zwischenraum gesehen" /></button>
-
-      <button class="work db-center"><img src="12382.jpg" alt="Kind hinter einem Trampolinnetz" /></button>
-
-      <button class="work db-small"><img src="12384.jpg" alt="Kristallartige Öffnung im Dunkel" /></button>
-
-      <button class="work db-wide"><img src="12383.jpg" alt="Zwei Kinder hinter hohem Gras" /></button>
-
-      <button class="work db-offset-right"><img src="3655.jpg" alt="Innenhof hinter einem Metallgitter" /></button>
-
-      <button class="work db-offset-left"><img src="3560.jpg" alt="Schwarzweißporträt hinter Blättern und Spiegelungen" /></button>
-
-      <div class="db-pair">
-        <button class="work"><img src="3654.jpg" alt="Pflanzen hinter einem Schaufenster" /></button>
-        <button class="work"><img src="3561.jpg" alt="Kranhaus, Straße und vorbeifahrendes Auto" /></button>
-      </div>
-
-      <button class="work db-center"><img src="3553.jpg" alt="Büste zwischen dichtem Grün" /></button>
-
-      <button class="work db-wide"><img src="3559.jpg" alt="Beschlagene Fensterscheibe mit Stadtsilhouette" /></button>
-
-      <div class="db-blackwhite">
-        <button class="work"><img src="3558.jpg" alt="Schwarzweißes Werkstattfenster mit Spiegelungen" /></button>
-        <button class="work"><img src="3557.jpg" alt="Dom und Vögel als Silhouetten vor farbigem Himmel" /></button>
-      </div>
-
-      <button class="work db-offset-left"><img src="3555.jpg" alt="Baum und Gebäude in Schwarzweiß" /></button>
-
-      <button class="work db-offset-right"><img src="3556.jpg" alt="Regentropfen auf einer Fensterscheibe" /></button>
-
+      <button class="work db-wide"><img src="20210114_183939.jpg" alt="Fotografie 1 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-pair-a"><img src="20210114_184031.jpg" alt="Fotografie 2 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-pair-b"><img src="20210217_142447.jpg" alt="Fotografie 3 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-narrow"><img src="20210412_150620.jpg" alt="Fotografie 4 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-center"><img src="20210412_150758.jpg" alt="Fotografie 5 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-small"><img src="20211112_204446.jpg" alt="Fotografie 6 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-wide"><img src="20211112_205455.jpg" alt="Fotografie 7 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-offset-right"><img src="20221228_115817.jpg" alt="Fotografie 8 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-offset-left"><img src="DSCF2550.JPG" alt="Fotografie 9 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-pair-a"><img src="DSCF2956.JPG" alt="Fotografie 10 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-pair-b"><img src="DSCF3255.JPG" alt="Fotografie 11 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-center"><img src="DSCF4054.JPG" alt="Fotografie 12 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-wide"><img src="DSCF4528.JPG" alt="Fotografie 13 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-offset-left"><img src="DSCF4590.JPG" alt="Fotografie 14 aus der Serie Durchblicke" loading="lazy"></button><button class="work db-offset-right"><img src="DSCF4704.JPG" alt="Fotografie 15 aus der Serie Durchblicke" loading="lazy"></button>
     </section>
   </main>
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Bildansicht">
     <button class="close" id="closeLightbox" aria-label="Bild schließen">×</button>
-    <img id="lightboxImage" src="" alt="" />
+    <img id="lightboxImage" src="" alt="">
     <div class="caption" id="caption"></div>
   </div>
 
-  <script src="script.js?v=32"></script>
+  <script src="script.js?v=33"></script>
 </body>
 </html>
