@@ -3,35 +3,85 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Türen & Glas</title>
-  <meta name="description" content="Fotografien, Fundstücke, Beobachtungen." />
-  <link rel="stylesheet" href="style.css?v=32" />
+  <title>Türen &amp; Glas</title>
+  <meta name="description" content="Fotografien alter Eingänge, Fenster und Strukturgläser." />
+  <link rel="stylesheet" href="style.css?v=33" />
+  <style>
+    .door-series {
+      width:min(1180px,100%);
+      margin:0 auto;
+      padding:0 var(--pad,clamp(1.15rem,3.2vw,3rem)) clamp(8rem,14vw,13rem);
+    }
+    .door-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:clamp(1.4rem,3vw,3.3rem);
+      align-items:start;
+    }
+    .door-work {
+      width:100%;
+      display:block;
+      margin:0;
+    }
+    .door-work img {
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    @media (max-width:760px) {
+      .door-grid {
+        grid-template-columns:1fr;
+        gap:4.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" aria-label="Navigation">
     <a class="site-name" href="index.html" aria-label="Startseite"></a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <a href="index.html">Start</a>
-    <a href="serien.html" aria-current="page">Serien</a>
-    <a href="einzelarbeiten.html">Einzelarbeiten</a>
+      <a href="serien.html" aria-current="page">Serien</a>
+      <a href="einzelarbeiten.html">Einzelarbeiten</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
+
   <main>
-    <section class="series-hero" aria-label="Türen & Glas">
+    <section class="series-hero" aria-label="Türen und Glas">
       <a class="back-link" href="serien.html">← Serien</a>
-      <h1 class="series-title">Türen & Glas</h1>
+      <h1 class="series-title">Türen &amp; Glas</h1>
       <p class="series-text">Fotografien alter Eingänge, Fenster und Strukturgläser. Beobachtungen von Übergängen zwischen Innen und Außen.</p>
-      <img class="series-hero-img" src="04-tuer-33.jpg" alt="Türen & Glas" />
-    </section>
-    <section class="works" aria-label="Bilder der Serie">
-      <div class="work-grid">
-        <button class="work" aria-label="Tür Nr. 33 ansehen"><img src="04-tuer-33.jpg" alt="Tür Nr. 33" /></button>
-        <button class="work" aria-label="Fenster mit Pflanzen ansehen"><img src="03-fenster-mit-pflanzen.jpg" alt="Fenster mit Pflanzen" /></button>
-        <button class="work" aria-label="Foto Film Ton Video ansehen"><img src="07-foto-film-ton-video.jpg" alt="Foto Film Ton Video" /></button>
-      </div>
+      <img class="series-hero-img" src="series-tueren-glas.jpg" alt="Vorschaubild der Serie Türen und Glas" />
     </section>
 
+    <section class="door-series" aria-label="23 Bilder der Serie Türen und Glas">
+      <div class="door-grid">
+        <button class="work door-work" aria-label="Tür 1 groß ansehen"><img src="Türen/tuer01.jpg" alt="Hauseingang 1 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 2 groß ansehen"><img src="Türen/tuer02.jpg" alt="Hauseingang 2 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 3 groß ansehen"><img src="Türen/tuer03.JPG" alt="Hauseingang 3 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 4 groß ansehen"><img src="Türen/tuer04.jpg" alt="Hauseingang 4 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 5 groß ansehen"><img src="Türen/tuer05.jpg" alt="Hauseingang 5 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 6 groß ansehen"><img src="Türen/tuer06.jpg" alt="Hauseingang 6 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 7 groß ansehen"><img src="Türen/tuer07.jpg" alt="Hauseingang 7 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 8 groß ansehen"><img src="Türen/tuer08.jpg" alt="Hauseingang 8 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 9 groß ansehen"><img src="Türen/tuer09.jpg" alt="Hauseingang 9 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 10 groß ansehen"><img src="Türen/tuer10.jpg" alt="Hauseingang 10 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 11 groß ansehen"><img src="Türen/tuer11.jpg" alt="Hauseingang 11 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 12 groß ansehen"><img src="Türen/tuer12.jpg" alt="Hauseingang 12 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 13 groß ansehen"><img src="Türen/tuer13.jpg" alt="Hauseingang 13 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 14 groß ansehen"><img src="Türen/tuer14.jpg" alt="Hauseingang 14 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 15 groß ansehen"><img src="Türen/tuer15.jpg" alt="Hauseingang 15 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 16 groß ansehen"><img src="Türen/tuer16.jpg" alt="Hauseingang 16 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 17 groß ansehen"><img src="Türen/tuer17.jpg" alt="Hauseingang 17 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 18 groß ansehen"><img src="Türen/tuer18.jpg" alt="Hauseingang 18 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 19 groß ansehen"><img src="Türen/tuer19.jpg" alt="Hauseingang 19 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 20 groß ansehen"><img src="Türen/tuer20.jpg" alt="Hauseingang 20 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 21 groß ansehen"><img src="Türen/tuer21.jpg" alt="Hauseingang 21 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 22 groß ansehen"><img src="Türen/tuer22.jpg" alt="Hauseingang 22 aus der Serie Türen &amp; Glas" /></button>
+        <button class="work door-work" aria-label="Tür 23 groß ansehen"><img src="Türen/tuer23.jpg" alt="Hauseingang 23 aus der Serie Türen &amp; Glas" /></button>
+      </div>
+    </section>
   </main>
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Bildansicht">
@@ -39,6 +89,7 @@
     <img id="lightboxImage" src="" alt="" />
     <div class="caption" id="caption"></div>
   </div>
+
   <script src="script.js?v=32"></script>
 </body>
 </html>
