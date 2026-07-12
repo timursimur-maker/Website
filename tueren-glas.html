@@ -5,36 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Türen &amp; Glas</title>
   <meta name="description" content="Fotografien alter Eingänge, Fenster und Strukturgläser." />
-  <link rel="stylesheet" href="style.css?v=33" />
-  <style>
-    .door-series {
-      width:min(1180px,100%);
-      margin:0 auto;
-      padding:0 var(--pad,clamp(1.15rem,3.2vw,3rem)) clamp(8rem,14vw,13rem);
-    }
-    .door-grid {
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:clamp(1.4rem,3vw,3.3rem);
-      align-items:start;
-    }
-    .door-work {
-      width:100%;
-      display:block;
-      margin:0;
-    }
-    .door-work img {
-      width:100%;
-      height:auto;
-      display:block;
-    }
-    @media (max-width:760px) {
-      .door-grid {
-        grid-template-columns:1fr;
-        gap:4.5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css?v=30" />
 </head>
 <body>
   <header class="site-header" aria-label="Navigation">
@@ -46,7 +17,6 @@
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
-
   <main>
     <section class="series-hero" aria-label="Türen und Glas">
       <a class="back-link" href="serien.html">← Serien</a>
@@ -54,8 +24,7 @@
       <p class="series-text">Fotografien alter Eingänge, Fenster und Strukturgläser. Beobachtungen von Übergängen zwischen Innen und Außen.</p>
       <img class="series-hero-img" src="series-tueren-glas.jpg" alt="Vorschaubild der Serie Türen und Glas" />
     </section>
-
-    <section class="door-series" aria-label="23 Bilder der Serie Türen und Glas">
+    <section class="works door-series" aria-label="23 Bilder der Serie Türen und Glas">
       <div class="door-grid">
         <button class="work door-work" aria-label="Tür 1 groß ansehen"><img src="tueren-01.jpg" alt="Hauseingang 1 aus der Serie Türen &amp; Glas" /></button>
         <button class="work door-work" aria-label="Tür 2 groß ansehen"><img src="tueren-02.jpg" alt="Hauseingang 2 aus der Serie Türen &amp; Glas" /></button>
@@ -83,13 +52,11 @@
       </div>
     </section>
   </main>
-
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Bildansicht">
     <button class="close" id="closeLightbox" aria-label="Bild schließen">×</button>
     <img id="lightboxImage" src="" alt="" />
     <div class="caption" id="caption"></div>
   </div>
-
-  <script src="script.js?v=32"></script>
+  <script src="script.js?v=30"></script>
 </body>
 </html>

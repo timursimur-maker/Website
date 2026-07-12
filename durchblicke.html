@@ -1,174 +1,44 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Durchblicke</title>
-  <meta name="description" content="Fotografien von Fenstern, Gittern, Spiegelungen und visuellen Schichten.">
-  <link rel="stylesheet" href="style.css?v=34">
-  <style>
-    .series-hero {
-      padding-bottom: clamp(4.5rem, 9vw, 8rem);
-    }
-    .series-hero .series-title {
-      margin-top: clamp(2.3rem, 5vw, 4.8rem);
-      margin-bottom: clamp(1.6rem, 3vw, 2.6rem);
-      font-size: clamp(3.6rem, 10vw, 8.5rem);
-      line-height: .92;
-      letter-spacing: -.055em;
-    }
-    .series-hero .series-text {
-      max-width: 37rem;
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
-      line-height: 1.55;
-    }
-
-    .durchblicke-page {
-      width: min(1240px, 100%);
-      margin: 0 auto;
-      padding: 0 var(--pad, clamp(1.15rem, 3.2vw, 3rem)) clamp(8rem, 14vw, 13rem);
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      column-gap: clamp(1rem, 2.4vw, 2.4rem);
-      row-gap: clamp(5rem, 11vw, 10rem);
-      align-items: start;
-    }
-    .durchblicke-page .work {
-      display: block;
-      width: 100%;
-      margin: 0;
-      border: 0;
-      padding: 0;
-      background: transparent;
-      cursor: zoom-in;
-    }
-    .durchblicke-page .work img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .db-hero { grid-column: 1 / -1; }
-    .db-pair { grid-column: span 6; }
-    .db-pair.tall { grid-column: 2 / span 4; }
-    .db-pair.tall + .db-pair { grid-column: 7 / span 5; align-self: end; }
-    .db-wide { grid-column: 1 / -1; }
-    .db-offset-left { grid-column: 1 / span 8; }
-    .db-offset-right { grid-column: 5 / -1; }
-    .db-small-right { grid-column: 8 / span 5; }
-    .db-small-left { grid-column: 1 / span 5; }
-    .db-narrow { grid-column: 5 / span 4; }
-    .db-small-center { grid-column: 5 / span 4; }
-    .db-final { grid-column: 2 / span 10; }
-
-    @media (max-width: 760px) {
-      .series-hero {
-        padding-bottom: 4rem;
-      }
-      .series-hero .series-title {
-        margin-top: 2rem;
-      }
-      .durchblicke-page {
-        display: block;
-      }
-      .durchblicke-page .work {
-        margin: 0 0 5.5rem;
-      }
-      .db-pair.tall,
-      .db-pair.tall + .db-pair,
-      .db-hero,
-      .db-pair,
-      .db-wide,
-      .db-offset-left,
-      .db-offset-right,
-      .db-small-right,
-      .db-small-left,
-      .db-narrow,
-      .db-small-center,
-      .db-final {
-        width: 100%;
-      }
-      .db-small-center {
-        width: 72%;
-        margin-left: auto !important;
-        margin-right: auto !important;
-      }
-    }
-  </style>
+  <meta name="description" content="Fotografien, Fundstücke, Beobachtungen." />
+  <link rel="stylesheet" href="style.css?v=32" />
 </head>
 <body>
   <header class="site-header" aria-label="Navigation">
     <a class="site-name" href="index.html" aria-label="Startseite"></a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <a href="index.html">Start</a>
-      <a href="serien.html" aria-current="page">Serien</a>
-      <a href="einzelarbeiten.html">Einzelarbeiten</a>
+    <a href="serien.html" aria-current="page">Serien</a>
+    <a href="einzelarbeiten.html">Einzelarbeiten</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
-
   <main>
     <section class="series-hero" aria-label="Durchblicke">
       <a class="back-link" href="serien.html">← Serien</a>
       <h1 class="series-title">Durchblicke</h1>
-      <p class="series-text">Fotografien von Fenstern, Gittern, Spiegelungen und visuellen Schichten – zwischen Innen und Außen, Nähe und Distanz.</p>
+      <p class="series-text">Fotografien von Überlagerungen, Reflexionen und Momenten zwischen Sichtbarkeit und Verbergen.</p>
+      <img class="series-hero-img" src="01-frau-hinter-pflanzen.jpg" alt="Durchblicke" />
+    </section>
+    <section class="works" aria-label="Bilder der Serie">
+      <div class="work-grid">
+        <button class="work" aria-label="Frau hinter Pflanzen ansehen"><img src="01-frau-hinter-pflanzen.jpg" alt="Frau hinter Pflanzen" /></button>
+        <button class="work" aria-label="Tür Nr. 33 ansehen"><img src="04-tuer-33.jpg" alt="Tür Nr. 33" /></button>
+        <button class="work" aria-label="Fenster mit Pflanzen ansehen"><img src="03-fenster-mit-pflanzen.jpg" alt="Fenster mit Pflanzen" /></button>
+      </div>
     </section>
 
-    <section class="durchblicke-page" aria-label="Bilder der Serie Durchblicke">
-      <button class="work db-hero" aria-label="Blick aus einem Fenster über Straße und Landschaft groß ansehen">
-        <img src="DSCF4704.JPG" alt="Blick aus einem Fenster über Straße und Landschaft" loading="lazy">
-      </button>
-      <button class="work db-pair tall" aria-label="Regentropfen auf einer Scheibe groß ansehen">
-        <img src="20210114_184031.jpg" alt="Regentropfen auf einer Scheibe" loading="lazy">
-      </button>
-      <button class="work db-pair" aria-label="Beschlagene Scheibe mit undeutlichen Formen groß ansehen">
-        <img src="20210412_150758.jpg" alt="Beschlagene Scheibe mit undeutlichen Formen" loading="lazy">
-      </button>
-      <button class="work db-wide" aria-label="Schaufenster mit Spiegelungen und Innenraum groß ansehen">
-        <img src="20210412_150620.jpg" alt="Schaufenster mit Spiegelungen und Innenraum" loading="lazy">
-      </button>
-      <button class="work db-offset-left" aria-label="Restaurantfenster mit Spiegelungen und Innenraum groß ansehen">
-        <img src="20211112_204446.jpg" alt="Restaurantfenster mit Spiegelungen und Innenraum" loading="lazy">
-      </button>
-      <button class="work db-offset-right" aria-label="Fenster mit Pflanzen im warmen Innenlicht groß ansehen">
-        <img src="20211112_205455.jpg" alt="Fenster mit Pflanzen im warmen Innenlicht" loading="lazy">
-      </button>
-      <button class="work db-wide" aria-label="Schaufensterpuppen hinter spiegelnder Scheibe groß ansehen">
-        <img src="DSCF4590.JPG" alt="Schaufensterpuppen hinter spiegelnder Scheibe" loading="lazy">
-      </button>
-      <button class="work db-small-right" aria-label="Büste zwischen dichter Vegetation groß ansehen">
-        <img src="20221228_115817.jpg" alt="Büste zwischen dichter Vegetation" loading="lazy">
-      </button>
-      <button class="work db-small-left" aria-label="Gitter vor einem Treppenhaus groß ansehen">
-        <img src="DSCF2550.JPG" alt="Gitter vor einem Treppenhaus" loading="lazy">
-      </button>
-      <button class="work db-pair" aria-label="Zwei Kinder hinter hohem Gras groß ansehen">
-        <img src="DSCF2956.JPG" alt="Zwei Kinder hinter hohem Gras" loading="lazy">
-      </button>
-      <button class="work db-pair" aria-label="Kind hinter einem Trampolinnetz groß ansehen">
-        <img src="DSCF4054.JPG" alt="Kind hinter einem Trampolinnetz" loading="lazy">
-      </button>
-      <button class="work db-narrow" aria-label="Orange Blumen durch einen schmalen Zwischenraum groß ansehen">
-        <img src="DSCF4528.JPG" alt="Orange Blumen durch einen schmalen Zwischenraum" loading="lazy">
-      </button>
-      <button class="work db-small-center" aria-label="Kristallartige Öffnung im Dunkel groß ansehen">
-        <img src="DSCF3255.JPG" alt="Kristallartige Öffnung im Dunkel" loading="lazy">
-      </button>
-      <button class="work db-wide" aria-label="Kölner Dom als Silhouette mit Vögeln groß ansehen">
-        <img src="20210217_142447.jpg" alt="Kölner Dom als Silhouette mit Vögeln" loading="lazy">
-      </button>
-      <button class="work db-final" aria-label="Baum und Landschaft in einer Spiegelung groß ansehen">
-        <img src="20210114_183939.jpg" alt="Baum und Landschaft in einer Spiegelung" loading="lazy">
-      </button>
-    </section>
   </main>
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Bildansicht">
     <button class="close" id="closeLightbox" aria-label="Bild schließen">×</button>
-    <img id="lightboxImage" src="" alt="">
+    <img id="lightboxImage" src="" alt="" />
     <div class="caption" id="caption"></div>
   </div>
-
-  <script src="script.js?v=34"></script>
+  <script src="script.js?v=32"></script>
 </body>
 </html>
