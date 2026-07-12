@@ -1,11 +1,67 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ligurien</title>
-  <meta name="description" content="Fotografien, Fundstücke, Beobachtungen." />
-  <link rel="stylesheet" href="style.css?v=32" />
+  <meta name="description" content="Fotografische Beobachtungen aus Ligurien: Meer, Architektur, Zeichen, Raster und Übergänge.">
+  <link rel="stylesheet" href="style.css?v=41">
+  <style>
+    .ligurien-page {
+      width: min(1180px, calc(100% - 2.5rem));
+      margin: 0 auto 10rem;
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: clamp(1.4rem, 3vw, 3.8rem);
+      align-items: start;
+    }
+    .ligurien-page .work {
+      border: 0;
+      padding: 0;
+      background: none;
+      cursor: zoom-in;
+    }
+    .ligurien-page img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .lg-hero { grid-column: 1 / span 8; }
+    .lg-tall-right { grid-column: 9 / -1; margin-top: 20%; }
+    .lg-wide { grid-column: 2 / -2; }
+    .lg-small-left { grid-column: 1 / span 5; margin-top: 8%; }
+    .lg-small-right { grid-column: 8 / -1; margin-top: 10%; }
+    .lg-pair-left { grid-column: 1 / span 6; }
+    .lg-pair-right { grid-column: 7 / -1; align-self: end; }
+    .lg-wide-offset { grid-column: 3 / -1; }
+    .lg-tall-left { grid-column: 1 / span 5; }
+    .lg-final { grid-column: 3 / -2; margin-top: 4%; }
+
+    @media (max-width: 760px) {
+      .series-hero { padding-bottom: 4rem; }
+      .ligurien-page {
+        display: block;
+        width: calc(100% - 2rem);
+        margin-bottom: 6rem;
+      }
+      .ligurien-page .work {
+        width: 100%;
+        margin: 0 0 4.5rem;
+      }
+      .ligurien-page .lg-small-left,
+      .ligurien-page .lg-small-right {
+        width: 78%;
+      }
+      .ligurien-page .lg-small-right {
+        margin-left: auto;
+      }
+      .ligurien-page .lg-final {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" aria-label="Navigation">
@@ -17,13 +73,57 @@
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
+
   <main>
     <section class="series-hero">
       <a class="back-link" href="serien.html">← Serien</a>
       <h1 class="series-title">Ligurien</h1>
-      <p class="series-text">Fotografische Beobachtungen einer Reise: Meer, Orte, Licht und Spuren im Alltag.</p>
-      <img class="series-hero-img" src="series-ligurien.jpg" alt="Felsige Bucht in Ligurien mit Meer und Badenden" />
+      <p class="series-text">Fotografische Beobachtungen zwischen Meer und Alltag: Architektur, Zeichen, Raster und Übergänge.</p>
+    </section>
+
+    <section class="ligurien-page" aria-label="Fotografien aus Ligurien">
+      <button class="work lg-hero" aria-label="Strandbad mit Treppen, Geländern und OPEN-Schild groß ansehen">
+        <img src="ligurien-01.jpg" alt="Strandbad mit Treppen, Geländern und OPEN-Schild">
+      </button>
+      <button class="work lg-tall-right" aria-label="Blick durch die Architektur des Strandbads auf das Meer groß ansehen">
+        <img src="ligurien-02.jpg" alt="Blick durch die Architektur des Strandbads auf das Meer">
+      </button>
+      <button class="work lg-wide" aria-label="Kleiner Hafen mit blau-weiß abgedeckten Booten groß ansehen">
+        <img src="ligurien-03.jpg" alt="Kleiner Hafen mit blau-weiß abgedeckten Booten">
+      </button>
+      <button class="work lg-small-left" aria-label="Fußballplatz hinter mehreren Netzen und Zäunen groß ansehen">
+        <img src="ligurien-04.jpg" alt="Fußballplatz hinter mehreren Netzen und Zäunen">
+      </button>
+      <button class="work lg-pair-left" aria-label="Blaue Zahl 90 an einer alten Hausfassade groß ansehen">
+        <img src="ligurien-05.jpg" alt="Blaue Zahl 90 an einer alten Hausfassade">
+      </button>
+      <button class="work lg-pair-right" aria-label="Friseursalon und Fotografien hinter einem Metallgitter groß ansehen">
+        <img src="ligurien-06.jpg" alt="Friseursalon und Fotografien hinter einem Metallgitter">
+      </button>
+      <button class="work lg-wide-offset" aria-label="Bahnhof Framura mit Gleisen und Tunnel groß ansehen">
+        <img src="ligurien-07.jpg" alt="Bahnhof Framura mit Gleisen und Tunnel">
+      </button>
+      <button class="work lg-tall-left" aria-label="Alte Holztür in einer verwitterten rosafarbenen Wand groß ansehen">
+        <img src="ligurien-08.jpg" alt="Alte Holztür in einer verwitterten rosafarbenen Wand">
+      </button>
+      <button class="work lg-small-right" aria-label="Hinweisschild der Polizia Locale groß ansehen">
+        <img src="ligurien-09.jpg" alt="Hinweisschild der Polizia Locale">
+      </button>
+      <button class="work lg-wide" aria-label="Belebter Gehweg mit Geschäften und Passanten groß ansehen">
+        <img src="ligurien-10.jpg" alt="Belebter Gehweg mit Geschäften und Passanten">
+      </button>
+      <button class="work lg-pair-left" aria-label="Küstenort mit Strand, Booten und Kirche groß ansehen">
+        <img src="ligurien-11.jpg" alt="Küstenort mit Strand, Booten und Kirche">
+      </button>
+      <button class="work lg-pair-right" aria-label="Strand mit Reihen geschlossener blau-weißer Schirme groß ansehen">
+        <img src="ligurien-12.jpg" alt="Strand mit Reihen geschlossener blau-weißer Schirme">
+      </button>
+      <button class="work lg-final" aria-label="Ruhige felsige Bucht mit zwei Badenden groß ansehen">
+        <img src="ligurien-13.jpg" alt="Ruhige felsige Bucht mit zwei Badenden">
+      </button>
     </section>
   </main>
+
+  <script src="script.js?v=41"></script>
 </body>
 </html>
