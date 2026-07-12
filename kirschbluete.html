@@ -4,33 +4,123 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kirschblüte</title>
-  <meta name="description" content="Fotografien, Fundstücke, Beobachtungen." />
-  <link rel="stylesheet" href="style.css?v=30" />
+  <meta name="description" content="Eine fotografische Serie über Blüte, Raum, Bewegung und Vergänglichkeit." />
+  <link rel="stylesheet" href="style.css?v=42" />
+  <style>
+    .kirsch-page{
+      width:min(1180px,100%);
+      margin:0 auto;
+      padding:0 var(--pad,clamp(1.15rem,3.2vw,3rem)) clamp(8rem,14vw,13rem);
+    }
+    .kirsch-opening{
+      display:grid;
+      grid-template-columns:minmax(0,1.3fr) minmax(15rem,.7fr);
+      gap:clamp(2rem,7vw,7rem);
+      align-items:end;
+      padding-bottom:clamp(7rem,14vw,13rem);
+    }
+    .kirsch-opening .work:first-child{width:100%}
+    .kirsch-opening .work:last-child{
+      width:78%;
+      justify-self:end;
+      margin-bottom:clamp(1rem,5vw,5rem);
+    }
+    .chair-sequence{
+      width:min(960px,100%);
+      margin:0 auto clamp(8rem,15vw,14rem);
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:clamp(1rem,2.4vw,2.4rem);
+      align-items:center;
+    }
+    .chair-sequence .work{width:100%}
+    .chair-sequence .work:nth-child(2){transform:translateY(clamp(1rem,4vw,3.5rem))}
+    .kirsch-closing{
+      width:min(760px,82%);
+      margin-left:auto;
+    }
+    .kirsch-page .work{
+      display:block;
+      border:0;
+      padding:0;
+      background:transparent;
+      cursor:zoom-in;
+    }
+    .kirsch-page .work img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    @media (max-width:760px){
+      .kirsch-opening{
+        display:block;
+        padding-bottom:7rem;
+      }
+      .kirsch-opening .work{
+        width:100%!important;
+        margin:0 0 4.5rem!important;
+      }
+      .chair-sequence{
+        display:block;
+        margin-bottom:7rem;
+      }
+      .chair-sequence .work{
+        margin-bottom:4.5rem;
+        transform:none!important;
+      }
+      .kirsch-closing{
+        width:100%;
+        margin:0;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" aria-label="Navigation">
     <a class="site-name" href="index.html" aria-label="Startseite"></a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <a href="index.html">Start</a>
-    <a href="serien.html" aria-current="page">Serien</a>
-    <a href="einzelarbeiten.html">Einzelarbeiten</a>
+      <a href="serien.html" aria-current="page">Serien</a>
+      <a href="einzelarbeiten.html">Einzelarbeiten</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
+
   <main>
     <section class="series-hero" aria-label="Kirschblüte">
       <a class="back-link" href="serien.html">← Serien</a>
       <h1 class="series-title">Kirschblüte</h1>
-      <p class="series-text">Eine Sammlung von Bildern rund um Licht, Blüte und Vergänglichkeit.</p>
-      <img class="series-hero-img" src="hero-kirschblueten-stuhl.jpg" alt="Kirschblüte" />
-    </section>
-    <section class="works" aria-label="Bilder der Serie">
-      <div class="work-grid">
-        <button class="work" aria-label="Kirschblüten-Stuhl ansehen"><img src="hero-kirschblueten-stuhl.jpg" alt="Kirschblüten-Stuhl" /></button>
-        <button class="work" aria-label="Orange Wand ansehen"><img src="09-kind-orangene-wand.jpg" alt="Orange Wand" /></button>
-      </div>
+      <p class="series-text">Eine fotografische Arbeit über Blüte, Raum, Bewegung und Vergänglichkeit.</p>
     </section>
 
+    <section class="kirsch-page" aria-label="Bilder der Serie Kirschblüte">
+      <div class="kirsch-opening">
+        <button class="work" aria-label="Kirschblüten vor blauem Himmel groß ansehen">
+          <img src="kirschbluete-01.jpg" alt="Kirschblüten vor blauem Himmel" />
+        </button>
+        <button class="work" aria-label="Kirschblüte im geöffneten Fenster groß ansehen">
+          <img src="kirschbluete-02.jpg" alt="Kirschblüte im geöffneten Fenster" />
+        </button>
+      </div>
+
+      <div class="chair-sequence" aria-label="Sequenz mit Stuhl und Figur">
+        <button class="work" aria-label="Bewegte Figur neben orangefarbenem Stuhl groß ansehen">
+          <img src="kirschbluete-03.jpg" alt="Bewegte Figur neben orangefarbenem Stuhl" />
+        </button>
+        <button class="work" aria-label="Stehende Figur zwischen Kirschblüten und Stuhl groß ansehen">
+          <img src="kirschbluete-04.jpg" alt="Stehende Figur zwischen Kirschblüten und orangefarbenem Stuhl" />
+        </button>
+        <button class="work" aria-label="Orangefarbener Stuhl im Blütenmeer groß ansehen">
+          <img src="kirschbluete-05.jpg" alt="Orangefarbener Stuhl im Blütenmeer" />
+        </button>
+      </div>
+
+      <div class="kirsch-closing">
+        <button class="work" aria-label="Geschlossenes Fenster groß ansehen">
+          <img src="kirschbluete-06.jpg" alt="Geschlossenes Fenster mit farbigem Strukturglas" />
+        </button>
+      </div>
+    </section>
   </main>
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Bildansicht">
@@ -38,6 +128,7 @@
     <img id="lightboxImage" src="" alt="" />
     <div class="caption" id="caption"></div>
   </div>
-  <script src="script.js?v=30"></script>
+
+  <script src="script.js?v=42"></script>
 </body>
 </html>
