@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Formen</title>
   <meta name="description" content="Wiederkehrende Strukturen in Natur und Alltag – Linien, Rhythmen, Spiralen und Geometrien.">
-  <link rel="stylesheet" href="style.css?v=35">
+  <link rel="stylesheet" href="style.css?v=43">
   <style>
     .series-hero {
       padding-bottom: clamp(4.5rem, 9vw, 8rem);
@@ -51,13 +51,18 @@
     .fm-hero { grid-column: 1 / -1; }
     .fm-pair-left { grid-column: 1 / span 7; }
     .fm-pair-right { grid-column: 9 / span 4; margin-top: 14%; }
-    .fm-diptych-left { grid-column: 1 / span 7; }
-    .fm-diptych-right { grid-column: 8 / span 5; align-self: center; }
-    .fm-tall-left { grid-column: 1 / span 7; }
-    .fm-small-right { grid-column: 9 / span 4; margin-top: 24%; }
-    .fm-wide-center { grid-column: 3 / span 8; }
-    .fm-small-left { grid-column: 1 / span 4; }
-    .fm-final { grid-column: 5 / -1; margin-top: 8%; }
+
+    .fm-locken { grid-column: 1 / span 6; }
+    .fm-herbst { grid-column: 7 / -1; align-self: end; }
+
+    .fm-himmel { grid-column: 1 / span 7; }
+    .fm-kugel { grid-column: 9 / span 4; margin-top: 18%; }
+
+    .fm-baum { grid-column: 1 / span 7; }
+    .fm-wald { grid-column: 8 / -1; align-self: center; }
+
+    .fm-final-left { grid-column: 1 / span 4; }
+    .fm-final-right { grid-column: 5 / -1; margin-top: 8%; }
 
     @media (max-width: 760px) {
       .series-hero {
@@ -72,18 +77,16 @@
       .formen-page .work {
         margin: 0 0 5.5rem;
       }
-      .fm-small-left,
-      .fm-small-right {
-        width: 74%;
+      .fm-pair-right,
+      .fm-kugel,
+      .fm-final-left {
+        width: 76%;
       }
-      .fm-small-right {
+      .fm-pair-right,
+      .fm-kugel {
         margin-left: auto !important;
       }
-      .fm-diptych-right {
-        width: 88%;
-        margin-left: auto !important;
-      }
-      .fm-final {
+      .fm-final-right {
         width: 92%;
         margin-left: auto !important;
       }
@@ -103,7 +106,7 @@
 
   <main>
     <section class="series-hero" aria-label="Formen">
-      <a class="back-link" href="serien.html">← Alle Serien</a>
+      <a class="back-link" href="serien.html">← Serien</a>
       <h1 class="series-title">Formen</h1>
       <p class="series-text">Wiederkehrende Strukturen in Natur und Alltag. Linien, Rhythmen, Spiralen und Geometrien lösen sich von ihrem Gegenstand und werden zum eigentlichen Motiv.</p>
     </section>
@@ -112,32 +115,40 @@
       <button class="work fm-hero" aria-label="Parkhaus mit gestaffelten Ebenen groß ansehen">
         <img src="0151_016.jpg" alt="Parkhaus mit gestaffelten Ebenen" loading="lazy">
       </button>
+
       <button class="work fm-pair-left" aria-label="Gestapeltes Holz in horizontalen Schichten groß ansehen">
         <img src="DSCF4380.JPG" alt="Gestapeltes Holz in horizontalen Schichten" loading="lazy">
       </button>
       <button class="work fm-pair-right" aria-label="Basketballkorb als grafische Form groß ansehen">
         <img src="06-basketballkorb.jpg" alt="Basketballkorb als grafische Form" loading="lazy">
       </button>
-      <button class="work fm-diptych-left" aria-label="Gedrehter Baumstamm groß ansehen">
-        <img src="DSCF3822.JPG" alt="Gedrehter Baumstamm" loading="lazy">
-      </button>
-      <button class="work fm-diptych-right" aria-label="Lockenkopf mit spiraliger Struktur groß ansehen">
+
+      <button class="work fm-locken" aria-label="Lockenkopf mit spiraliger Struktur groß ansehen">
         <img src="20211112_205646.jpg" alt="Lockenkopf mit spiraliger Struktur" loading="lazy">
       </button>
-      <button class="work fm-tall-left" aria-label="Wald mit dichtem Liniengeflecht groß ansehen">
-        <img src="20211112_203503.jpg" alt="Wald mit dichtem Liniengeflecht" loading="lazy">
-      </button>
-      <button class="work fm-small-right" aria-label="Wolkenformationen vor blauem Himmel groß ansehen">
-        <img src="DSCF4444.JPG" alt="Wolkenformationen vor blauem Himmel" loading="lazy">
-      </button>
-      <button class="work fm-wide-center" aria-label="Herbstbaum vor dunklem Wald groß ansehen">
+      <button class="work fm-herbst" aria-label="Herbstbaum vor dunklem Wald groß ansehen">
         <img src="0152_007.jpg" alt="Herbstbaum vor dunklem Wald" loading="lazy">
       </button>
-      <button class="work fm-small-left" aria-label="Kristallartige Öffnung im Dunkel groß ansehen">
-        <img src="0150_004.jpg" alt="Kristallartige Öffnung im Dunkel" loading="lazy">
+
+      <button class="work fm-himmel" aria-label="Wolkenformationen vor blauem Himmel groß ansehen">
+        <img src="DSCF4444.JPG" alt="Wolkenformationen vor blauem Himmel" loading="lazy">
       </button>
-      <button class="work fm-final" aria-label="Rissige Holzoberfläche in Schwarzweiß groß ansehen">
+      <button class="work fm-kugel" aria-label="Kugel und Lichtform in Schwarzweiß groß ansehen">
+        <img src="formen-kugel.jpg" alt="Kugel und Lichtform in Schwarzweiß" loading="lazy">
+      </button>
+
+      <button class="work fm-baum" aria-label="Gedrehter Baumstamm groß ansehen">
+        <img src="DSCF3822.JPG" alt="Gedrehter Baumstamm" loading="lazy">
+      </button>
+      <button class="work fm-wald" aria-label="Wald mit dichtem Liniengeflecht groß ansehen">
+        <img src="20211112_203503.jpg" alt="Wald mit dichtem Liniengeflecht" loading="lazy">
+      </button>
+
+      <button class="work fm-final-left" aria-label="Rissige Holzoberfläche in Schwarzweiß groß ansehen">
         <img src="0150_001.jpg" alt="Rissige Holzoberfläche in Schwarzweiß" loading="lazy">
+      </button>
+      <button class="work fm-final-right" aria-label="Zitronen und Orangen in einer Holzkiste groß ansehen">
+        <img src="Zitrone.jpg" alt="Zitronen und Orangen in einer Holzkiste" loading="lazy">
       </button>
     </section>
   </main>
@@ -148,6 +159,6 @@
     <div class="caption" id="caption"></div>
   </div>
 
-  <script src="script.js?v=35"></script>
+  <script src="script.js?v=43"></script>
 </body>
 </html>
