@@ -1,49 +1,111 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Einzelarbeiten</title>
-  <meta name="description" content="Fotografien, Fundstücke, Beobachtungen." />
-  <link rel="stylesheet" href="style.css?v=30" />
+  <meta name="description" content="Eigenständige Fotografien außerhalb der Serien.">
+  <link rel="stylesheet" href="style.css?v=44">
+  <style>
+    .einzel-page {
+      width: min(1200px, calc(100% - 2.5rem));
+      margin: 0 auto 10rem;
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: clamp(1.5rem, 3vw, 4rem);
+      align-items: start;
+    }
+    .einzel-page .work {
+      border: 0;
+      padding: 0;
+      background: none;
+      cursor: zoom-in;
+    }
+    .einzel-page img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .ea-wide { grid-column: 2 / -2; }
+    .ea-tall-left { grid-column: 1 / span 5; }
+    .ea-tall-right { grid-column: 8 / -1; margin-top: 18%; }
+    .ea-small-left { grid-column: 2 / span 4; }
+    .ea-small-right { grid-column: 8 / span 4; margin-top: 12%; }
+    .ea-wide-offset { grid-column: 4 / -1; }
+    .ea-pair-left { grid-column: 1 / span 6; }
+    .ea-pair-right { grid-column: 7 / -1; align-self: end; }
+
+    @media (max-width: 760px) {
+      .einzel-page {
+        display: block;
+        width: calc(100% - 2rem);
+        margin-bottom: 6rem;
+      }
+      .einzel-page .work {
+        width: 100%;
+        margin: 0 0 4.8rem;
+      }
+      .einzel-page .ea-small-left,
+      .einzel-page .ea-small-right {
+        width: 78%;
+      }
+      .einzel-page .ea-small-right {
+        margin-left: auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" aria-label="Navigation">
     <a class="site-name" href="index.html" aria-label="Startseite"></a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <a href="index.html">Start</a>
-    <a href="serien.html">Serien</a>
-    <a href="einzelarbeiten.html" aria-current="page">Einzelarbeiten</a>
+      <a href="serien.html">Serien</a>
+      <a href="einzelarbeiten.html" aria-current="page">Einzelarbeiten</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
+
   <main>
     <section class="page" aria-label="Einzelarbeiten Einführung">
       <h1 class="page-title">Einzelarbeiten</h1>
-      <p class="page-intro">Eigenständige Fotografien außerhalb der Serien. Bilder, die für sich stehen und den Blick über die laufenden Werkgruppen hinaus öffnen.</p>
-    </section>
-    <section class="works" aria-label="Einzelarbeiten">
-      <div class="work-grid">
-        <button class="work" aria-label="Frau hinter Pflanzen ansehen"><img src="01-frau-hinter-pflanzen.jpg" alt="Frau hinter Pflanzen" /></button>
-        <button class="work" aria-label="Fahrradsattel ansehen"><img src="02-fahrradsattel.jpg" alt="Fahrradsattel" /></button>
-        <button class="work" aria-label="Fenster mit Pflanzen ansehen"><img src="03-fenster-mit-pflanzen.jpg" alt="Fenster mit Pflanzen" /></button>
-        <button class="work" aria-label="Tür Nr. 33 ansehen"><img src="04-tuer-33.jpg" alt="Tür Nr. 33" /></button>
-        <button class="work" aria-label="Kranhäuser ansehen"><img src="05-kranhaeuser.jpg" alt="Kranhäuser" /></button>
-        <button class="work" aria-label="Basketballkorb ansehen"><img src="06-basketballkorb.jpg" alt="Basketballkorb" /></button>
-        <button class="work" aria-label="Foto Film Ton Video ansehen"><img src="07-foto-film-ton-video.jpg" alt="Foto Film Ton Video" /></button>
-        <button class="work" aria-label="Fiat Panda ansehen"><img src="08-fiat-panda.jpg" alt="Fiat Panda" /></button>
-        <button class="work" aria-label="Orange Wand ansehen"><img src="09-kind-orangene-wand.jpg" alt="Orange Wand" /></button>
-        <button class="work" aria-label="Lockenkopf ansehen"><img src="10-lockenkopf.jpg" alt="Lockenkopf" /></button>
-      </div>
+      <p class="page-intro">Eigenständige Fotografien außerhalb der Serien. Weitere Beobachtungen, die für sich stehen und auf keiner anderen Seite wiederholt werden.</p>
     </section>
 
+    <section class="einzel-page" aria-label="Einzelarbeiten">
+      <button class="work ea-wide" aria-label="Straßenschild Günzelstraße groß ansehen">
+        <img src="einzelarbeit-01-guentzelstrasse.jpg" alt="Straßenschild Günzelstraße" loading="lazy">
+      </button>
+      <button class="work ea-tall-left" aria-label="Gräser und einzelner Baum in Schwarzweiß groß ansehen">
+        <img src="einzelarbeit-02-gras.jpg" alt="Gräser und einzelner Baum in Schwarzweiß" loading="lazy">
+      </button>
+      <button class="work ea-tall-right" aria-label="Mann in einer Telefonzelle groß ansehen">
+        <img src="einzelarbeit-03-telefonzelle.jpg" alt="Mann in einer Telefonzelle" loading="lazy">
+      </button>
+      <button class="work ea-small-left" aria-label="Adlerfigur auf einem Schornstein groß ansehen">
+        <img src="einzelarbeit-04-adler.jpg" alt="Adlerfigur auf einem Schornstein" loading="lazy">
+      </button>
+      <button class="work ea-wide-offset" aria-label="Rote Bank im Herbstlaub groß ansehen">
+        <img src="einzelarbeit-05-rote-bank.jpg" alt="Rote Bank im Herbstlaub" loading="lazy">
+      </button>
+      <button class="work ea-small-right" aria-label="Bambus mit Privatschild groß ansehen">
+        <img src="einzelarbeit-06-privat.jpg" alt="Bambus mit Privatschild" loading="lazy">
+      </button>
+      <button class="work ea-pair-left" aria-label="Mann mit transparentem Regenschirm groß ansehen">
+        <img src="einzelarbeit-07-regenschirm.jpg" alt="Mann mit transparentem Regenschirm" loading="lazy">
+      </button>
+      <button class="work ea-pair-right" aria-label="Person in einer Wurfbewegung neben einem Hund groß ansehen">
+        <img src="einzelarbeit-08-wurfbewegung.jpg" alt="Person in einer Wurfbewegung neben einem Hund" loading="lazy">
+      </button>
+    </section>
   </main>
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Bildansicht">
     <button class="close" id="closeLightbox" aria-label="Bild schließen">×</button>
-    <img id="lightboxImage" src="" alt="" />
+    <img id="lightboxImage" src="" alt="">
     <div class="caption" id="caption"></div>
   </div>
-  <script src="script.js?v=30"></script>
+
+  <script src="script.js?v=44"></script>
 </body>
 </html>

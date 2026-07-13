@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sitemap</title>
+  <meta name="description" content="Übersicht aller Seiten der Website.">
+  <link rel="stylesheet" href="style.css?v=44">
+  <style>
+    .sitemap-list {
+      list-style: none;
+      padding: 0;
+      margin: 3rem 0 8rem;
+      max-width: 42rem;
+    }
+    .sitemap-list li {
+      border-top: 1px solid rgba(0,0,0,.16);
+    }
+    .sitemap-list li:last-child {
+      border-bottom: 1px solid rgba(0,0,0,.16);
+    }
+    .sitemap-list a {
+      display: block;
+      padding: 1rem 0;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      text-decoration: none;
+    }
+    .sitemap-sub {
+      padding-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" aria-label="Navigation">
+    <a class="site-name" href="index.html" aria-label="Startseite"></a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="index.html">Start</a>
+      <a href="serien.html">Serien</a>
+      <a href="einzelarbeiten.html">Einzelarbeiten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">Sitemap</h1>
+    <p class="page-intro">Übersicht aller Bereiche und Werkgruppen der Website.</p>
+    <ul class="sitemap-list">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="serien.html">Serien</a></li>
+      <li class="sitemap-sub"><a href="tueren-glas.html">Türen &amp; Glas</a></li>
+      <li class="sitemap-sub"><a href="kirschbluete.html">Kirschblüte</a></li>
+      <li class="sitemap-sub"><a href="durchblicke.html">Durchblicke</a></li>
+      <li class="sitemap-sub"><a href="formen.html">Formen</a></li>
+      <li class="sitemap-sub"><a href="ligurien.html">Ligurien</a></li>
+      <li><a href="einzelarbeiten.html">Einzelarbeiten</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </main>
+</body>
+</html>
