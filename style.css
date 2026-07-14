@@ -389,3 +389,15 @@ main{width:100%}
   .wordmark{font-size:.72rem}
   .site-footer-inner{align-items:flex-start;flex-direction:column}
 }
+
+
+.wordmark{
+  display:inline-flex;
+  align-items:baseline;
+  letter-spacing:.14em;
+}
+.wordmark-gap{
+  display:inline-block;
+  width:.46em;
+  flex:0 0 .46em;
+}
