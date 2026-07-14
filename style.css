@@ -337,3 +337,55 @@ main{width:100%}
   .series-card h2{font-size:clamp(2.5rem,12vw,4rem)}
   .series-hero{padding-top:3rem}
 }
+
+
+.wordmark{
+  min-width:auto;
+  min-height:auto;
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-transform:lowercase;
+  opacity:.88;
+}
+.site-footer{
+  width:min(var(--page),100%);
+  margin:0 auto;
+  padding:2.2rem var(--pad) 2.8rem;
+  border-top:1px solid var(--line);
+  font-size:.72rem;
+  letter-spacing:.03em;
+}
+.site-footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.5rem;
+  flex-wrap:wrap;
+}
+.site-footer nav{
+  display:flex;
+  gap:1rem 1.4rem;
+  flex-wrap:wrap;
+}
+.site-footer a{
+  text-decoration:none;
+  opacity:.68;
+}
+.site-footer a:hover{opacity:1}
+.legal-page{max-width:900px}
+.legal-copy{
+  max-width:46rem;
+  margin-top:3rem;
+  line-height:1.65;
+}
+.legal-copy h2{
+  margin:2.4rem 0 .75rem;
+  font-size:1rem;
+  letter-spacing:.02em;
+}
+.legal-copy p{margin:0 0 1rem}
+@media(max-width:760px){
+  .wordmark{font-size:.72rem}
+  .site-footer-inner{align-items:flex-start;flex-direction:column}
+}
